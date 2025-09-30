@@ -4,12 +4,16 @@
  */
 package application.port.in;
 
+import application.port.in.command.ContratarProfesorCommand;
+
 /**
  *
  * @author lm-carlos
  */
 public interface ContratarProfesorUseCase {
-    
+
     // Interfaz del puerto de entrada
     
+    void handle(ContratarProfesorCommand command);
+
 }

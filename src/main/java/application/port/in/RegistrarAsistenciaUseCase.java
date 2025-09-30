@@ -4,12 +4,16 @@
  */
 package application.port.in;
 
+import application.port.in.command.RegistrarAsistenciaCommand;
+
 /**
  *
  * @author lm-carlos
  */
 public interface RegistrarAsistenciaUseCase {
-    
+
     // Interfaz del puerto de entrada
     
+    void handle(RegistrarAsistenciaCommand command);
+
 }

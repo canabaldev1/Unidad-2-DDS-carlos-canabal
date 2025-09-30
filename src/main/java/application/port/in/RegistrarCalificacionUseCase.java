@@ -4,12 +4,16 @@
  */
 package application.port.in;
 
+import application.port.in.command.RegistrarCalificacionCommand;
+
 /**
  *
  * @author lm-carlos
  */
 public interface RegistrarCalificacionUseCase {
-    
+
     // Interfaz del puerto de entrada
     
+    void handle(RegistrarCalificacionCommand command);
+
 }

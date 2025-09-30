@@ -4,6 +4,8 @@
  */
 package application.port.in;
 
+import application.port.in.command.AsignarAlumnoACursoCommand;
+
 /**
  *
  * @author lm-carlos
@@ -11,5 +13,7 @@ package application.port.in;
 public interface AsignarAlumnoACursoUseCase {
     
     // Interfaz del puerto de entrada
+    
+    void handle (AsignarAlumnoACursoCommand command);
     
 }

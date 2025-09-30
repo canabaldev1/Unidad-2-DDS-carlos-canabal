@@ -4,12 +4,16 @@
  */
 package application.port.in;
 
+import application.port.in.command.MatricularAlumnoCommand;
+
 /**
  *
  * @author lm-carlos
  */
 public interface MatricularAlumnoUseCase {
-    
+
     // Interfaz del puerto de entrada
     
+    void handle(MatricularAlumnoCommand command);
+
 }
