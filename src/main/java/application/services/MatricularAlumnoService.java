@@ -1,6 +1,7 @@
 package application.services;
 
 import application.port.in.MatricularAlumnoUseCase;
+import application.port.in.command.MatricularAlumnoCommand;
 
 /**
  *
@@ -9,5 +10,8 @@ import application.port.in.MatricularAlumnoUseCase;
 public class MatricularAlumnoService implements MatricularAlumnoUseCase {
     
     // implementacion del ṕuerto de entrada
+    
+    @Override
+    public void handle(MatricularAlumnoCommand command){};
 
 }

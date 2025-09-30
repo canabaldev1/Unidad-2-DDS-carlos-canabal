@@ -1,6 +1,7 @@
 package application.services;
 
 import application.port.in.RegistrarCalificacionUseCase;
+import application.port.in.command.RegistrarCalificacionCommand;
 
 /**
  *
@@ -9,5 +10,8 @@ import application.port.in.RegistrarCalificacionUseCase;
 public class RegistrarCalificacionService implements RegistrarCalificacionUseCase {
     
     // implementacion del ṕuerto de entrada
+    
+    @Override
+    public void handle(RegistrarCalificacionCommand command) {};
 
 }

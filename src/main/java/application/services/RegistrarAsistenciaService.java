@@ -1,6 +1,7 @@
 package application.services;
 
 import application.port.in.RegistrarAsistenciaUseCase;
+import application.port.in.command.RegistrarAsistenciaCommand;
 
 /**
  *
@@ -9,5 +10,8 @@ import application.port.in.RegistrarAsistenciaUseCase;
 public class RegistrarAsistenciaService implements RegistrarAsistenciaUseCase {
     
     // implementacion del ṕuerto de entrada
+    
+    @Override
+    public void handle(RegistrarAsistenciaCommand command) {};
 
 }

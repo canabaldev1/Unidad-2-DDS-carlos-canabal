@@ -1,6 +1,7 @@
 package application.services;
 
 import application.port.in.AsignarAlumnoACursoUseCase;
+import application.port.in.command.AsignarAlumnoACursoCommand;
 
 /**
  *
@@ -8,6 +9,9 @@ import application.port.in.AsignarAlumnoACursoUseCase;
  */
 public class AsignarAlumnoACursoService implements AsignarAlumnoACursoUseCase {
     
-    // implementacion del ṕuerto de entrada
+    // implementacion del puerto de entrada
+    
+    @Override
+    public void handle (AsignarAlumnoACursoCommand command){};
 
 }
