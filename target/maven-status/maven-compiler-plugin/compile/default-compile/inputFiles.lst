@@ -52,6 +52,12 @@
 /home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/shared/CicloAcademico.java
 /home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/shared/DatosContacto.java
 /home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/shared/DatosPersonales.java
+/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/AsignarAlumnoACursoController.java
+/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/AsignarProfesorACursoController.java
+/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/ContratarProfesorController.java
+/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/MatricularAlumnoController.java
+/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/RegistrarAsistenciaController.java
+/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/RegistrarCalificacionController.java
 /home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeAlumnos.java
 /home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeAsignacionServicios.java
 /home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeAsistencias.java
