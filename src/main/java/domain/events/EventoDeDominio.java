@@ -12,5 +12,6 @@ import java.time.Instant;
  */
 public interface EventoDeDominio {
 
-    // Interfaz que deben cumplir los eventos de dominio
+    Instant fecha();
+    String id();
 }

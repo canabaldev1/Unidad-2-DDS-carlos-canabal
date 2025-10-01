@@ -1,10 +1,16 @@
 package domain.events;
 
+import java.time.Instant;
+
 /**
  *
  * @author lm-carlos
  */
-public class CursoCreado {
+public record CursoCreado(String cursoId, Instant fecha) implements EventoDeDominio {
 
-    // Definicion de las propiedades del evento
+    @Override
+
+    public String id() {
+        return cursoId;
+    }
 }
