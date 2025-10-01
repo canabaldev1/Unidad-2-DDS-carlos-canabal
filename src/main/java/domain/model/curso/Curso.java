@@ -74,6 +74,14 @@ public class Curso {
         claseIds.add(claseId);
     }
 
+    public List<String> getAlumnoIds() {
+        return alumnoIds;
+    }
+
+    public int getCupoMaximo() {
+        return cupoMaximo;
+    }
+
     public CursoId getId() {
         return id;
     }
