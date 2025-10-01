@@ -58,6 +58,15 @@ public class Curso {
         alumnoIds.add(alumnoId);
     }
 
+    public void asignarProfesor(String profesorId) {
+        if (profesorId == null || profesorId.isBlank()) {
+            throw new CursoException("El profesorId no puede ser nulo o vacío");
+        }
+
+        this.profesorId = profesorId;
+
+    }
+
     public void agregarClase(ClaseId claseId) {
         if (claseId == null) {
             throw new CursoException("El claseId no puede ser nulo");

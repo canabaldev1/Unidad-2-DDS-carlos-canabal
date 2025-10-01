@@ -6,7 +6,7 @@ import java.time.Instant;
  *
  * @author lm-carlos
  */
-public record ProfesorContratado(String profesorId, Instant fecha) implements EventoDeDominio {
+public record ProfesorAsignado(String profesorId, Instant fecha) implements EventoDeDominio {
 
     @Override
 
