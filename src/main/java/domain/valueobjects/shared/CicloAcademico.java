@@ -19,4 +19,9 @@ public record CicloAcademico(int año, LocalDate fechaInicio, LocalDate fechaFin
             throw new IllegalArgumentException("La fecha de fin no puede ser anterior a la fecha de inicio");
         }
     }
+
+    // implementacion de factory
+    public static CicloAcademico crear(int año, LocalDate fechaInicio, LocalDate fechaFin) {
+        return new CicloAcademico(año, fechaInicio, fechaFin);
+    }
 }
