@@ -31,7 +31,6 @@ public class Alumno {
 
     public AlumnoId getId() { return id; }
 
-    // Reglas de dominio
     public void actualizarDatosContacto(DatosContacto nuevoContacto) {
         if (nuevoContacto == null) throw new AlumnoException("El contacto no puede ser nulo");
         this.datosContacto = nuevoContacto;

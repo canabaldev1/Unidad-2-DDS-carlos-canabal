@@ -2,6 +2,7 @@ package domain.model.profesor;
 
 import domain.exceptions.ProfesorException;
 import domain.valueobjects.profesor.ProfesorId;
+import domain.valueobjects.shared.DatosPersonales;
 
 /**
  *
@@ -10,11 +11,11 @@ import domain.valueobjects.profesor.ProfesorId;
 public class Profesor {
 
     private final ProfesorId id;
-    private String datosPersonales;
+    private DatosPersonales datosPersonales;
     private String especialidad;
 
-    public Profesor(ProfesorId id, String datosPersonales, String especialidad) {
-        if (datosPersonales == null || datosPersonales.isBlank()) {
+    public Profesor(ProfesorId id, DatosPersonales datosPersonales, String especialidad) {
+        if (datosPersonales == null) {
             throw new ProfesorException("Los datos personales no pueden ser nulos o vacíos");
         }
         if (especialidad == null || especialidad.isBlank()) {
@@ -36,7 +37,7 @@ public class Profesor {
         return id;
     }
 
-    public String getDatosPersonales() {
+    public DatosPersonales getDatosPersonales() {
         return datosPersonales;
     }
 

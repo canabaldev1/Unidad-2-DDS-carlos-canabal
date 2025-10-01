@@ -21,7 +21,7 @@ public class ServicioAsignacionAlumno {
             throw new IllegalArgumentException("El curso no tiene cupos");
         }
 
-        curso.inscribirAlumno(alumno.getId().getValue());
+        curso.inscribirAlumno(alumno.getId());
 
         // Retornar evento de dominio
         return new AlumnoMatriculado(alumno.getId().getValue(), Instant.now());

@@ -1,40 +1,41 @@
 package domain.model.curso;
 
 import domain.exceptions.CursoException;
+import domain.valueobjects.alumno.AlumnoId;
+import domain.valueobjects.curso.Aula;
 import domain.valueobjects.curso.ClaseId;
 import domain.valueobjects.curso.CursoId;
+import domain.valueobjects.profesor.ProfesorId;
+import domain.valueobjects.shared.CicloAcademico;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ *s
  * @author lm-carlos
  */
 public class Curso {
 
     private final CursoId id;
     private String asignatura;
-    private String cicloAcademico;
+    private CicloAcademico cicloAcademico;
     private int cupoMaximo;
-    private String aula;
-    private final List<String> alumnoIds;  // Podrían ser VO AlumnoId
-    private final List<ClaseId> claseIds;
-    private String profesorId; // Podría ser VO ProfesorId
+    private Aula aula;
+    private List<AlumnoId> alumnoIds;  
+    private List<ClaseId> claseIds;
+    private ProfesorId profesorId; 
 
-    public Curso(CursoId id, String asignatura, String cicloAcademico, int cupoMaximo, String aula, String profesorId) {
+    public Curso(CursoId id, String asignatura, CicloAcademico cicloAcademico, int cupoMaximo, Aula aula, ProfesorId profesorId) {
         if (asignatura == null || asignatura.isBlank()) {
             throw new CursoException("La asignatura no puede ser nula o vacía");
-        }
-        if (cicloAcademico == null || cicloAcademico.isBlank()) {
-            throw new CursoException("El ciclo académico no puede ser nulo o vacío");
         }
         if (cupoMaximo <= 0) {
             throw new CursoException("El cupo máximo debe ser mayor a cero");
         }
-        if (aula == null || aula.isBlank()) {
+        if (aula == null) {
             throw new CursoException("El aula no puede ser nula o vacía");
         }
-        if (profesorId == null || profesorId.isBlank()) {
+        if (profesorId == null) {
             throw new CursoException("El profesorId no puede ser nulo o vacío");
         }
 
@@ -48,8 +49,18 @@ public class Curso {
         this.claseIds = new ArrayList<>();
     }
 
-    public void inscribirAlumno(String alumnoId) {
-        if (alumnoId == null || alumnoId.isBlank()) {
+    public Curso(CursoId id, String asignatura, int cupoMaximo) {
+        this.id = id;
+        this.asignatura = asignatura;
+        this.cupoMaximo = cupoMaximo;
+        this.alumnoIds = new ArrayList<>();
+        this.claseIds = new ArrayList<>();
+    }
+    
+    
+
+    public void inscribirAlumno(AlumnoId alumnoId) {
+        if (alumnoId == null) {
             throw new CursoException("El alumnoId no puede ser nulo o vacío");
         }
         if (alumnoIds.size() >= cupoMaximo) {
@@ -58,8 +69,8 @@ public class Curso {
         alumnoIds.add(alumnoId);
     }
 
-    public void asignarProfesor(String profesorId) {
-        if (profesorId == null || profesorId.isBlank()) {
+    public void asignarProfesor(ProfesorId profesorId) {
+        if (profesorId == null ) {
             throw new CursoException("El profesorId no puede ser nulo o vacío");
         }
 
@@ -74,7 +85,7 @@ public class Curso {
         claseIds.add(claseId);
     }
 
-    public List<String> getAlumnoIds() {
+    public List<AlumnoId> getAlumnoIds() {
         return alumnoIds;
     }
 

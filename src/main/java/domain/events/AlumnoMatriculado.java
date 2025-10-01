@@ -13,4 +13,6 @@ public record AlumnoMatriculado(String alumnoId, Instant fecha) implements Event
     public String id() {
         return alumnoId;
     }
+    
+    
 }

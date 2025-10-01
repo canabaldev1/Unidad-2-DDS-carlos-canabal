@@ -12,7 +12,7 @@ public class Clase {
 
     private final ClaseId id;
     private final CursoId cursoId;
-    private final String profesorId; // Podría ser VO ProfesorId
+    private final String profesorId; 
     private String horario;
 
     public Clase(ClaseId id, CursoId cursoId, String profesorId, String horario) {

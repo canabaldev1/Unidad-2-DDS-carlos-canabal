@@ -9,7 +9,7 @@ import application.port.in.command.RegistrarAsistenciaCommand;
  */
 public class RegistrarAsistenciaService implements RegistrarAsistenciaUseCase {
     
-    // implementacion del ṕuerto de entrada
+    // implementacion del puerto de entrada
     
     @Override
     public void handle(RegistrarAsistenciaCommand command) {};
