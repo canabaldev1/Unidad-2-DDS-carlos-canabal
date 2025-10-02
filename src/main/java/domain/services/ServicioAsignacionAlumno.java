@@ -1,6 +1,6 @@
 package domain.services;
 
-import domain.events.AlumnoMatriculado;
+import domain.events.AlumnoAsignado;
 import domain.model.alumno.Alumno;
 import domain.model.curso.Curso;
 import domain.specifications.CupoDisponibleSpecification;
@@ -13,7 +13,7 @@ import java.time.Instant;
  */
 public class ServicioAsignacionAlumno {
 
-    public AlumnoMatriculado matricularAlumno(Alumno alumno, Curso curso) {
+    public AlumnoAsignado matricularAlumno(Alumno alumno, Curso curso) {
 
         Specification<Curso> capacidad = new CupoDisponibleSpecification();
 
@@ -24,7 +24,7 @@ public class ServicioAsignacionAlumno {
         curso.inscribirAlumno(alumno.getId());
 
         // Retornar evento de dominio
-        return new AlumnoMatriculado(alumno.getId().getValue(), Instant.now());
+        return new AlumnoAsignado(alumno.getId().getValue(), Instant.now());
     }
 
 }
