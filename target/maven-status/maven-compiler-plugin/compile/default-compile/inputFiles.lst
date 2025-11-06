@@ -1,96 +1,96 @@
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/AsignarAlumnoACursoUseCase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/AsignarProfesorACursoUseCase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/ContratarProfesorUseCase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/MatricularAlumnoUseCase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/RegistrarAsistenciaUseCase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/RegistrarCalificacionUseCase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/command/AsignarAlumnoACursoCommand.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/command/AsignarProfesorACursoCommand.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/command/ContratarProfesorCommand.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/command/MatricularAlumnoCommand.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/command/RegistrarAsistenciaCommand.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/port/in/command/RegistrarCalificacionCommand.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/services/AsignarAlumnoACursoService.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/services/AsignarProfesorACursoService.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/services/ContratarProfesorService.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/services/MatricularAlumnoService.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/services/RegistrarAsistenciaService.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/application/services/RegistrarCalificacionService.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/com/mycompany/und_2_dds_carlos_canabal/Unidad2DDSCarlosCanabal.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/enums/EstadoAsistencia.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/enums/TipoServicio.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/AlumnoAsignado.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/AlumnoMatriculado.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/AsistenciaRegistrada.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/ClaseProgramada.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/CursoCreado.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/EventoDeDominio.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/events/ProfesorAsignado.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/AlumnoException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/AsignacionServicioException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/AsistenciaException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/CalificacionException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/ClaseException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/ContratoException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/CursoException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/MatriculaException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/ProfesorException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/exceptions/SesionException.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/alumno/Alumno.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/alumno/AsignacionServicio.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/alumno/Asistencia.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/alumno/Calificacion.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/alumno/Matricula.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/curso/Clase.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/curso/Curso.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/curso/Sesion.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/profesor/Contrato.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/model/profesor/Profesor.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeAlumnos.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeAsignacionServicios.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeAsistencias.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeCalificaciones.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeClases.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeContratos.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeCursos.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeMatriculas.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeProfesores.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/port/out/repositories/RepositorioDeSesiones.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/services/ServicioAsignacionAlumno.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/services/ServicioAsignacionProfesor.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/services/ServicioDeAsistencia.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/specifications/CupoDisponibleSpecification.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/specifications/Specification.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/alumno/AlumnoId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/alumno/AsignacionServicioId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/alumno/AsistenciaId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/alumno/CalificacionId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/alumno/MatriculaId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/alumno/ServicioComplementario.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/curso/Asignatura.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/curso/Aula.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/curso/ClaseId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/curso/CursoId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/curso/Horario.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/curso/SesionId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/profesor/ContratoId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/profesor/ProfesorId.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/shared/CicloAcademico.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/shared/DatosContacto.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/domain/valueobjects/shared/DatosPersonales.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/AsignarAlumnoACursoController.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/AsignarProfesorACursoController.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/ContratarProfesorController.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/MatricularAlumnoController.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/RegistrarAsistenciaController.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/in/RegistrarCalificacionController.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeAlumnos.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeAsignacionServicios.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeAsistencias.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeCalificaciones.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeClases.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeContratos.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeCursos.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeMatriculas.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeProfesores.java
-/home/lm-carlos/NetBeansProjects/Unidad-2-DDS-carlos-canabal/src/main/java/infraestructure/adapter/out/repositories/MongoRepositorioDeSesiones.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\RegistrarAsistenciaUseCase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\ContratoException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeCalificaciones.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\alumno\Alumno.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeProfesores.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\specifications\Specification.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeCalificaciones.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\services\ServicioAsignacionAlumno.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\ClaseException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\alumno\Calificacion.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\RegistrarCalificacionUseCase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\services\ServicioDeAsistencia.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\MatriculaException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\alumno\AsignacionServicioId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\AlumnoAsignado.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\ProfesorAsignado.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeCursos.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\in\RegistrarAsistenciaController.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\CursoCreado.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\curso\CursoId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\curso\Horario.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\command\RegistrarCalificacionCommand.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeSesiones.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeClases.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\ClaseProgramada.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\curso\ClaseId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeClases.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\alumno\AsignacionServicio.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\services\MatricularAlumnoService.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\in\RegistrarCalificacionController.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\curso\SesionId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\services\ContratarProfesorService.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\AsistenciaRegistrada.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\ProfesorException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\in\AsignarProfesorACursoController.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\curso\Aula.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeAsignacionServicios.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\AsignarAlumnoACursoUseCase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeCursos.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\curso\Asignatura.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\profesor\ProfesorId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\alumno\ServicioComplementario.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\curso\Clase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\shared\DatosContacto.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeContratos.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\services\AsignarProfesorACursoService.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\curso\Curso.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeMatriculas.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\CalificacionException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\services\RegistrarCalificacionService.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeAlumnos.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\command\AsignarAlumnoACursoCommand.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\com\mycompany\und_2_dds_carlos_canabal\Unidad2DDSCarlosCanabalApplication.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\profesor\Profesor.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\alumno\AsistenciaId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\alumno\AlumnoId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\in\AsignarAlumnoACursoController.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\alumno\MatriculaId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\profesor\ContratoId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\services\ServicioAsignacionProfesor.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\CursoException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeMatriculas.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\command\AsignarProfesorACursoCommand.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\SesionException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\services\RegistrarAsistenciaService.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\AsignarProfesorACursoUseCase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeAlumnos.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\alumno\Matricula.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\AsignacionServicioException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\alumno\CalificacionId.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\command\RegistrarAsistenciaCommand.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\in\ContratarProfesorController.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeSesiones.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\AsistenciaException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\services\AsignarAlumnoACursoService.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeAsistencias.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\AlumnoMatriculado.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\specifications\CupoDisponibleSpecification.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\curso\Sesion.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\command\MatricularAlumnoCommand.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\events\EventoDeDominio.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\command\ContratarProfesorCommand.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\profesor\Contrato.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\out\repositories\MongoRepositorioDeAsistencias.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\MatricularAlumnoUseCase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\exceptions\AlumnoException.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeProfesores.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\infraestructure\adapter\in\MatricularAlumnoController.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeAsignacionServicios.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\shared\DatosPersonales.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\port\out\repositories\RepositorioDeContratos.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\model\alumno\Asistencia.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\application\port\in\ContratarProfesorUseCase.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\enums\TipoServicio.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\enums\EstadoAsistencia.java
+C:\Users\BCpollito\Documents\trabajos desarrollo uni\HexagonalEnProyectoReal\src\main\java\domain\valueobjects\shared\CicloAcademico.java
