@@ -1,5 +1,6 @@
 package domain.test;
 
+import domain.events.AlumnoAsignado;
 import org.junit.jupiter.api.Test;
 
 import domain.events.AlumnoMatriculado;
@@ -42,7 +43,7 @@ class ServicioAsignacionAlumnoTest {
         ServicioAsignacionAlumno servicio = new ServicioAsignacionAlumno();
 
         // Act
-        AlumnoMatriculado evento = servicio.matricularAlumno(alumno, curso);
+        AlumnoAsignado evento = servicio.matricularAlumno(alumno, curso);
 
         // Assert
         assertNotNull(evento);
