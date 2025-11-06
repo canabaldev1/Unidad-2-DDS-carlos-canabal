@@ -26,3 +26,4 @@ replay_pid*
 #archivos propios de intellij idea
 .idea
 project-tree.txt
+target
