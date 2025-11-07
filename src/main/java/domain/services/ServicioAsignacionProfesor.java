@@ -1,7 +1,9 @@
 package domain.services;
 
+import domain.events.ProfesorAsignado;
 import domain.model.curso.Curso;
 import domain.model.profesor.Profesor;
+import java.time.Instant;
 
 /**
  *
@@ -9,9 +11,10 @@ import domain.model.profesor.Profesor;
  */
 public class ServicioAsignacionProfesor {
 
-    public void asignarProfesor(Curso curso, Profesor profesor) {
+    public ProfesorAsignado asignarProfesorACurso(Profesor profesor, Curso curso) {
+        curso.asignarProfesor(profesor.getId());
 
-        // Relaciona al profesor que recibe por parametro al respectivo curso
-        
+        // Retornar evento de dominio
+        return new ProfesorAsignado(profesor.getId().getValue(), Instant.now());
     }
 }

@@ -9,7 +9,7 @@ import application.port.in.command.ContratarProfesorCommand;
  */
 public class ContratarProfesorService implements ContratarProfesorUseCase {
 
-    // implementacion del ṕuerto de entrada
+    // implementacion del puerto de entrada
     
     @Override
     public void handle(ContratarProfesorCommand command){};

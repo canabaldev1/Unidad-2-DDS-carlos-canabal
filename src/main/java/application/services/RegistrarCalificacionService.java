@@ -9,7 +9,7 @@ import application.port.in.command.RegistrarCalificacionCommand;
  */
 public class RegistrarCalificacionService implements RegistrarCalificacionUseCase {
     
-    // implementacion del ṕuerto de entrada
+    // implementacion del puerto de entrada
     
     @Override
     public void handle(RegistrarCalificacionCommand command) {};

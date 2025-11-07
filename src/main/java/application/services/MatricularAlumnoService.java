@@ -9,7 +9,7 @@ import application.port.in.command.MatricularAlumnoCommand;
  */
 public class MatricularAlumnoService implements MatricularAlumnoUseCase {
     
-    // implementacion del ṕuerto de entrada
+    // implementacion del puerto de entrada
     
     @Override
     public void handle(MatricularAlumnoCommand command){};

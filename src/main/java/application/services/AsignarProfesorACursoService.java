@@ -9,7 +9,7 @@ import application.port.in.command.AsignarProfesorACursoCommand;
  */
 public class AsignarProfesorACursoService implements AsignarProfesorACursoUseCase {
     
-    // implementacion del ṕuerto de entrada
+    // implementacion del puerto de entrada
     
     @Override
     public void handle (AsignarProfesorACursoCommand command){};
