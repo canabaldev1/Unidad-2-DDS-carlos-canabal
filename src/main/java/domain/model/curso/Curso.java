@@ -9,6 +9,7 @@ import domain.valueobjects.profesor.ProfesorId;
 import domain.valueobjects.shared.CicloAcademico;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
 
 /**
  *s
@@ -16,16 +17,16 @@ import java.util.List;
  */
 public class Curso {
 
-    private final CursoId id;
     private String asignatura;
-    private CicloAcademico cicloAcademico;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
     private int cupoMaximo;
     private Aula aula;
     private List<AlumnoId> alumnoIds;  
     private List<ClaseId> claseIds;
     private ProfesorId profesorId; 
 
-    public Curso(CursoId id, String asignatura, CicloAcademico cicloAcademico, int cupoMaximo, Aula aula, ProfesorId profesorId) {
+    public Curso(String asignatura, LocalDate fechaInicio, LocalDate fechaFin , int cupoMaximo, Aula aula, ProfesorId profesorId) {
         if (asignatura == null || asignatura.isBlank()) {
             throw new CursoException("La asignatura no puede ser nula o vacía");
         }
@@ -38,19 +39,24 @@ public class Curso {
         if (profesorId == null) {
             throw new CursoException("El profesorId no puede ser nulo o vacío");
         }
+        if (fechaInicio == null || fechaFin == null || fechaFin.isBefore(fechaInicio)) {
+            throw new CursoException("Fechas de ciclo académico inválidas");
+        }
 
-        this.id = id;
         this.asignatura = asignatura;
-        this.cicloAcademico = cicloAcademico;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
         this.cupoMaximo = cupoMaximo;
         this.aula = aula;
         this.profesorId = profesorId;
+        //pendiente por hacer
+        //guardar listas con los id's de los estudiantes en tablas independientes
+        //y las listas con los id's de las clases en tablas independientes
         this.alumnoIds = new ArrayList<>();
         this.claseIds = new ArrayList<>();
     }
 
     public Curso(CursoId id, String asignatura, int cupoMaximo) {
-        this.id = id;
         this.asignatura = asignatura;
         this.cupoMaximo = cupoMaximo;
         this.alumnoIds = new ArrayList<>();
@@ -93,7 +99,43 @@ public class Curso {
         return cupoMaximo;
     }
 
-    public CursoId getId() {
-        return id;
+    public String getAsignatura() {
+        return asignatura;
+    }
+
+    public void setAsignatura(String asignatura) {
+        this.asignatura = asignatura;
+    }
+
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public LocalDate getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
+    public ProfesorId getProfesorId() {
+        return profesorId;
+    }
+
+    public void setProfesorId(ProfesorId profesorId) {
+        this.profesorId = profesorId;
+    }
+
+    public Aula getAula() {
+        return aula;
+    }
+
+    public void setAula(Aula aula) {
+        this.aula = aula;
     }
 }
