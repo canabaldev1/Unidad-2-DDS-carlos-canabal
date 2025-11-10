@@ -6,12 +6,9 @@ import java.time.LocalDate;
  *
  * @author lm-carlos
  */
-public record CicloAcademico(int año, LocalDate fechaInicio, LocalDate fechaFin) {
+public record CicloAcademico(LocalDate fechaInicio, LocalDate fechaFin) {
 
     public CicloAcademico   {
-        if (año <= 0) {
-            throw new IllegalArgumentException("El año debe ser mayor que cero");
-        }
         if (fechaInicio == null || fechaFin == null) {
             throw new IllegalArgumentException("Las fechas no pueden ser nulas");
         }
@@ -21,7 +18,7 @@ public record CicloAcademico(int año, LocalDate fechaInicio, LocalDate fechaFin
     }
 
     // implementacion de factory
-    public static CicloAcademico crear(int año, LocalDate fechaInicio, LocalDate fechaFin) {
-        return new CicloAcademico(año, fechaInicio, fechaFin);
+    public static CicloAcademico crear(LocalDate fechaInicio, LocalDate fechaFin) {
+        return new CicloAcademico(fechaInicio, fechaFin);
     }
 }
