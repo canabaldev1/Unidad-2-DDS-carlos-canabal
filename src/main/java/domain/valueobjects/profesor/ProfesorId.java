@@ -15,6 +15,7 @@ public class ProfesorId {
             throw new IllegalArgumentException("El id del Profesor no puede ser nulo o vacío");
         }
         this.value = value;
+        return ;
     }
 
     public static ProfesorId generate() {

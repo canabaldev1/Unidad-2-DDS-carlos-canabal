@@ -8,20 +8,20 @@ import java.util.UUID;
  */
 public class CursoId {
 
-    private final String value;
+    private final int value;
 
-    public CursoId(String value) {
-        if (value == null || value.isBlank()) {
-            throw new IllegalArgumentException("El id del Curso no puede ser nulo o vacío");
+    public CursoId(int value) {
+        if (value <= 0 ) {
+            throw new IllegalArgumentException("El id del Curso no puede ser nulo o vacío" + value);
         }
         this.value = value;
     }
 
     public static CursoId generate() {
-        return new CursoId(UUID.randomUUID().toString());
+        return new CursoId(UUID.randomUUID().hashCode());
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 }

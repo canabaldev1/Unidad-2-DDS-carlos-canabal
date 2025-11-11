@@ -1,15 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package domain.port.out.repositories;
+
+import domain.model.curso.Curso;
+import java.util.List;
+import java.util.Optional;
 
 /**
  *
- * @author lm-carlos
+ * @author Victor Garcia
  */
 public interface RepositorioDeCursos {
-    
     // Interfaz que utiliza el adaptador del repositorio
-    
+    Curso guardar(Curso curso);
+    Optional<Curso> buscarPorId(String id);
+    List<Curso> listar();
 }
