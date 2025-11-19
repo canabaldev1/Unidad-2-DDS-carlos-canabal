@@ -45,7 +45,7 @@ private final RepositorioDeProfesores repositorioDeProfesores;
         Profesor profesor = new Profesor(profesorId, datosPersonales, command.especialidad());
 
 
-        // 5. GUARDAR
+        // GUARDAR
         repositorioDeProfesores.guardar(profesor);
     }
 }

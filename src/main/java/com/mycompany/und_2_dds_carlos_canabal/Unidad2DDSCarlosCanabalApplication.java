@@ -9,8 +9,10 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.context.ConfigurableApplicationContext;
 import application.port.in.RegistrarCursoUseCase;
+import infraestructure.adapter.in.swing.JFrameVentanaPrincipal;
 
 import java.time.LocalDate;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication(scanBasePackages = {
     "application",
@@ -27,13 +29,20 @@ public class Unidad2DDSCarlosCanabalApplication {
         //SpringApplication.run(Unidad2DDSCarlosCanabalApplication.class, args);
 
         // Inicia el contexto de Spring Boot
-        ConfigurableApplicationContext context
-                = SpringApplication.run(Unidad2DDSCarlosCanabalApplication.class, args);
+        ConfigurableApplicationContext context = new SpringApplicationBuilder(Unidad2DDSCarlosCanabalApplication.class)
+                .headless(false)
+                .run(args);
 
         System.out.println("Aplicación Spring Boot iniciada correctamente\n.");
-        System.out.println("Implementación de la interfaz RegistrarCursoUseCase: ");
+        
+        JFrameVentanaPrincipal ventanaPrincipal = context.getBean(JFrameVentanaPrincipal.class);
+        
+        ventanaPrincipal.setVisible(true);
 
         //prueba de post para crear un curso nuevo
+/*      
+        System.out.println("Implementación de la interfaz RegistrarCursoUseCase: ");
+
         RegistrarCursoUseCase registrarCurso = context.getBean(RegistrarCursoUseCase.class);
 
         try {
@@ -51,6 +60,6 @@ public class Unidad2DDSCarlosCanabalApplication {
             System.out.println("Error al registrar el curso: " + e.getMessage());
         }
 
-        context.close();
+        context.close();*/
     }
 }
