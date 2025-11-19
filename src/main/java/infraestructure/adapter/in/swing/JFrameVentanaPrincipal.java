@@ -4,6 +4,7 @@
  */
 package infraestructure.adapter.in.swing;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -39,7 +40,12 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Crear Usuario");
+        jButton1.setText("Crear Profesor");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AbrirCrearUsuario(evt);
+            }
+        });
 
         jButton2.setText("Agregar Contrato");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +98,15 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+    
+    @Autowired
+    private JFrameCrearProfesor ventanaCrearProfesor;
+    
+    private void AbrirCrearUsuario(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirCrearUsuario
+        // TODO add your handling code here:
+        ventanaCrearProfesor.setLocationRelativeTo(this);
+        ventanaCrearProfesor.setVisible(true);
+    }//GEN-LAST:event_AbrirCrearUsuario
 
     /**
      * @param args the command line arguments

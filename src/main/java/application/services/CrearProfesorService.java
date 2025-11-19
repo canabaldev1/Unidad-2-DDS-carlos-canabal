@@ -32,11 +32,6 @@ private final RepositorioDeProfesores repositorioDeProfesores;
             command.fechaNacimiento()
         );
         
-        DatosContacto datosContacto = DatosContacto.crear(
-            command.telefono(),
-            command.email(),
-            command.direccion()
-        );
 
         // CREAR ID ÚNICO
         ProfesorId profesorId = ProfesorId.generate();
