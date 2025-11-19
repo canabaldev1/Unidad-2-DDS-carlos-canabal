@@ -18,7 +18,7 @@ public class CursoId {
     }
 
     public static CursoId generate() {
-        return new CursoId(UUID.randomUUID().hashCode());
+        return new CursoId(Math.abs(UUID.randomUUID().hashCode()));
     }
 
     public int getValue() {

@@ -19,10 +19,22 @@ public record DatosPersonales(String nombres, String apellidos, LocalDate fechaN
             throw new IllegalArgumentException("La fecha de nacimiento no puede ser nula");
         }
     }
-    
+
     // implementaciion de factory
     public static DatosPersonales crear(String nombres, String apellidos, LocalDate fechaNacimiento) {
         return new DatosPersonales(nombres.trim(), apellidos.trim(), fechaNacimiento);
     }
-    
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
 }
