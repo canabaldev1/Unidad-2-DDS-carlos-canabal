@@ -36,13 +36,13 @@ public class Unidad2DDSCarlosCanabalApplication {
 
         try {
            Curso curso = registrarCurso.registrarCurso(
-                    "esternocleidomastoideo",
+                    "ingles avanzado",
                     30,
                     LocalDate.of(2024, 9, 1),
                     LocalDate.of(2025, 6, 30),
                     new Aula("Aula 101", "planta 2b", "Edificio Central",
                             "laboratorio de redes", 23 ),
-                    new ProfesorId("prof-12345")
+                    new ProfesorId("2502")
             );
             System.out.println("Curso registrado exitosamente: ");
         } catch (Exception e) {
