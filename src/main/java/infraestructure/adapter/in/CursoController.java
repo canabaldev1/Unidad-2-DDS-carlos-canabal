@@ -3,7 +3,6 @@ package infraestructure.adapter.in;
 import application.port.in.RegistrarCursoUseCase;
 import domain.model.curso.Curso;
 import domain.valueobjects.curso.Aula;
-import domain.valueobjects.profesor.ProfesorId;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;

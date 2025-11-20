@@ -1,4 +1,4 @@
-package infraestructure.adapter.out.repositories;
+package infraestructure.adapter.out.repositories.Curso;
 
 import domain.model.curso.Curso;
 import domain.port.out.repositories.RepositorioDeCursos;

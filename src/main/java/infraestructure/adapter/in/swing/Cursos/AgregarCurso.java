@@ -6,7 +6,6 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import domain.valueobjects.curso.Aula;
 
 import java.time.LocalDate;
-import domain.valueobjects.profesor.ProfesorId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
