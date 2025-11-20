@@ -4,6 +4,10 @@
  */
 package domain.port.out.repositories;
 
+import domain.model.profesor.Contrato;
+import java.util.List;
+import java.util.Optional;
+
 /**
  *
  * @author lm-carlos
@@ -11,5 +15,7 @@ package domain.port.out.repositories;
 public interface RepositorioDeContratos {
     
     // Interfaz que utiliza el adaptador del repositorio
-    
+    Contrato guardar(Contrato contrato);
+    Optional<Contrato> buscarPorId(String id);
+    List<Contrato> listar();
 }
