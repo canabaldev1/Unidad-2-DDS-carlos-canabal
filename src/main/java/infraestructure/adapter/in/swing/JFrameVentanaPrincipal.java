@@ -44,7 +44,12 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Crear Usuario");
+        jButton1.setText("Crear Profesor");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AbrirCrearUsuario(evt);
+            }
+        });
 
         jButton2.setText("Agregar Contrato");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

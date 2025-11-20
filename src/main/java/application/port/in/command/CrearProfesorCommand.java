@@ -14,8 +14,5 @@ public record CrearProfesorCommand(
     String nombre,
     String apellido, 
     LocalDate fechaNacimiento,
-    String telefono,
-    String email,
-    String direccion,
     String especialidad
 ) {}
