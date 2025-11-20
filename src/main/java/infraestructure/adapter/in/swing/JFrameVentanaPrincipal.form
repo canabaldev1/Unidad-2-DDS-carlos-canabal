@@ -70,12 +70,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Crear Curso"/>
+        <Property name="text" type="java.lang.String" value="Cursos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Agregar Alumno a Curso"/>
+        <Property name="text" type="java.lang.String" value="Alumnos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
