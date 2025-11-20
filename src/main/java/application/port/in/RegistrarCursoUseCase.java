@@ -7,6 +7,6 @@ import domain.valueobjects.profesor.ProfesorId;
 import java.time.LocalDate;
 
 public interface RegistrarCursoUseCase {
-    Curso registrarCurso(String asignatura, int cupoMaximo, LocalDate fechaInicio, LocalDate fechaFin, Aula aula, ProfesorId profesorId);
+    Curso registrarCurso(String asignatura, int cupoMaximo, LocalDate fechaInicio, LocalDate fechaFin, Aula aula, String profesorId);
 
 }
