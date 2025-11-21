@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class JFrameCrearProfesor extends javax.swing.JFrame {
-
+    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrameCrearProfesor.class.getName());
 
     /**
@@ -27,6 +27,7 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
      */
     public JFrameCrearProfesor() {
         initComponents();
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -71,7 +72,7 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Crea Profesor");
+        jLabel5.setText("Crear Profesor");
 
         jButton2.setText("Limpiar Formulario");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -89,9 +90,6 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
                 .addGap(84, 84, 84)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,6 +104,9 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
                             .addComponent(apellidosProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(nombresProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(especialidadProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -133,11 +134,11 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(especialidadProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
 
         pack();
@@ -145,7 +146,7 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
 
     @Autowired
     private CrearProfesorUseCase crearProfesorUseCase;
-
+    
 
     private void AccionCrearProfesor(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AccionCrearProfesor
         // TODO add your handling code here:
@@ -155,7 +156,7 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
                     || apellidosProfesor.getText().trim().isEmpty()
                     || especialidadProfesor.getText().trim().isEmpty()
                     || fechaNacimientoProfesor.getDate() == null) {
-
+                
                 JOptionPane.showMessageDialog(this,
                         "Por favor complete todos los campos obligatorios",
                         "Campos Incompletos",
@@ -190,16 +191,16 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
                     "Profesor creado exitosamente",
                     "Éxito",
                     JOptionPane.INFORMATION_MESSAGE);
-
+            
             limpiarFormulario();
-
+            
         } catch (IllegalArgumentException e) {
             // Errores de validación del dominio
             JOptionPane.showMessageDialog(this,
                     "Error: " + e.getMessage(),
                     "Error de Validación",
                     JOptionPane.ERROR_MESSAGE);
-
+            
         } catch (Exception e) {
             // Errores inesperados
             JOptionPane.showMessageDialog(this,
@@ -215,7 +216,7 @@ public class JFrameCrearProfesor extends javax.swing.JFrame {
         // TODO add your handling code here:
         limpiarFormulario();
     }//GEN-LAST:event_AccionLimpiarFormulario
-
+    
     private void limpiarFormulario() {
         nombresProfesor.setText("");
         apellidosProfesor.setText("");

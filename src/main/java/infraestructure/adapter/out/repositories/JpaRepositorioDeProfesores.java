@@ -37,9 +37,9 @@ public class JpaRepositorioDeProfesores implements RepositorioDeProfesores {
 
     @Override
     public Optional<Profesor> buscarPorId(String id) {
-        return springRepo.findById(Long.valueOf(id))
+        return springRepo.findById(id)
                 .map(entity -> new Profesor(
-                    new ProfesorId(entity.getId().getValue()),
+                    entity.getId(),
                     new DatosPersonales(
                         entity.getNombre(),
                         entity.getApellido(),
@@ -56,7 +56,8 @@ public class JpaRepositorioDeProfesores implements RepositorioDeProfesores {
                 .collect(Collectors.toList());
     }
 
-    // Mapeo: Entity JPA → Objeto Dominio
+    // MAPEO
+    
     private Profesor toDomain(JpaProfesorEntity entity) {
         // Crear DatosPersonales con los datos de la entity
         DatosPersonales datosPersonales = new DatosPersonales(
@@ -72,7 +73,6 @@ public class JpaRepositorioDeProfesores implements RepositorioDeProfesores {
         return new Profesor(profesorId, datosPersonales, entity.getEspecialidad());
     }
 
-    // Mapeo: Objeto Dominio → Entity JPA
     private JpaProfesorEntity toEntity(Profesor profesor) {
         DatosPersonales datos = profesor.getDatosPersonales();
 

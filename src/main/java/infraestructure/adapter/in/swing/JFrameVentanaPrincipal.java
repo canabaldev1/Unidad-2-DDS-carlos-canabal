@@ -8,19 +8,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import infraestructure.adapter.in.swing.Cursos.JFrameCursos;
+
 /**
  *
  * @author lm-carlos
  */
 @Component
 public class JFrameVentanaPrincipal extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrameVentanaPrincipal.class.getName());
 
     /**
      * Creates new form JFrameVentanaPrincipal
      */
     private final ApplicationContext context;
+
     @Autowired
     public JFrameVentanaPrincipal(ApplicationContext context) {
         this.context = context;
@@ -38,9 +40,9 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        CursosButton = new javax.swing.JButton();
-        AlumnosButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,36 +56,43 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
         jButton2.setText("Agregar Contrato");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                AbrirCrearContrato(evt);
             }
         });
-
-        CursosButton.setText("Cursos");
-        CursosButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CursosButtonActionPerformed(evt);
-            }
-        });
-
-        AlumnosButton.setText("Alumnos");
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("SOFTWARE DE GESTION ESCOLAR");
 
+        jButton5.setText("Ver lista de Contratos");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AbrirListaDeContratos(evt);
+            }
+        });
+
+        jButton3.setText("Cursos");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CursosAction(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(AlumnosButton, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                    .addComponent(CursosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,12 +102,12 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addComponent(jButton1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton5))
                 .addGap(18, 18, 18)
-                .addComponent(CursosButton)
-                .addGap(18, 18, 18)
-                .addComponent(AlumnosButton)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addComponent(jButton3)
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         pack();
@@ -108,16 +117,51 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void CursosButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        JFrameCursos ventanaCursos = context.getBean(JFrameCursos.class);
+    private void AbrirListaDeContratos(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirListaDeContratos
+        // TODO add your handling code here:
+        ventanaListaContratos.setLocationRelativeTo(this);
+        ventanaListaContratos.setVisible(true);
+    }//GEN-LAST:event_AbrirListaDeContratos
+
+    private void AbrirCrearContrato(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirCrearContrato
+        // TODO add your handling code here:
+        ventanaCrearContrato.setLocationRelativeTo(this);
+        ventanaCrearContrato.setVisible(true);
+    }//GEN-LAST:event_AbrirCrearContrato
+
+    private void AbrirCrearUsuario(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AbrirCrearUsuario
+        // TODO add your handling code here:
+        ventanaCrearProfesor.setLocationRelativeTo(this);
+        ventanaCrearProfesor.setVisible(true);
+    }//GEN-LAST:event_AbrirCrearUsuario
+
+    private void CursosAction(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CursosAction
+        // TODO add your handling code here:
+        ventanaCursos.setLocationRelativeTo(this);
         ventanaCursos.setVisible(true);
-        this.setVisible(false);
-        }
+    }//GEN-LAST:event_CursosAction
+
+    private void CursosButtonActionPerformed(java.awt.event.ActionEvent evt) {
+        ventanaCursos.setLocationRelativeTo(this);
+        ventanaCursos.setVisible(true);
+    }
+
+    @Autowired
+    private JFrameCrearProfesor ventanaCrearProfesor;
+
+    @Autowired
+    private JFrameCrearContrato ventanaCrearContrato;
+
+    @Autowired
+    private JFrameListaContratos ventanaListaContratos;
+
+    @Autowired
+    private JFrameCursos ventanaCursos;
 
     /**
      * @param args the command line arguments
      */
-/*    public static void main(String args[]) {
+    /*    public static void main(String args[]) {
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -135,8 +179,8 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton CursosButton;
-    private javax.swing.JButton AlumnosButton;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

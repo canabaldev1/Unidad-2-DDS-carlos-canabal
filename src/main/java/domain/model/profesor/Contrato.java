@@ -13,14 +13,18 @@ public class Contrato {
 
     private final ContratoId id;
     private final ProfesorId profesorId;
+    private String numero;
     private String cicloAcademico;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private double salario;
 
-    public Contrato(ContratoId id, ProfesorId profesorId, String cicloAcademico, LocalDate fechaInicio, LocalDate fechaFin, double salario) {
+    public Contrato(ContratoId id, ProfesorId profesorId, String numero, String cicloAcademico, LocalDate fechaInicio, LocalDate fechaFin, double salario) {
         if (profesorId == null) {
             throw new ContratoException("El profesorId no puede ser nulo");
+        }
+        if (numero == null || numero.isBlank()) {
+            throw new ContratoException("El número no puede ser nulo o vacío");
         }
         if (cicloAcademico == null || cicloAcademico.isBlank()) {
             throw new ContratoException("El ciclo académico no puede ser nulo o vacío");
@@ -37,6 +41,7 @@ public class Contrato {
 
         this.id = id;
         this.profesorId = profesorId;
+        this.numero = numero;
         this.cicloAcademico = cicloAcademico;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -56,6 +61,10 @@ public class Contrato {
 
     public ProfesorId getProfesorId() {
         return profesorId;
+    }
+
+    public String getNumero() {
+        return numero;
     }
 
     public String getCicloAcademico() {
