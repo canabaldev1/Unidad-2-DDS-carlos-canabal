@@ -18,7 +18,7 @@ import java.time.LocalDate;
  * @author lm-carlos
  */
 public class Curso {
-
+    private Integer CursoId;
     private String asignatura;
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
@@ -28,7 +28,7 @@ public class Curso {
     private List<ClaseId> claseIds;
     private String profesorId;
 
-    public Curso(String asignatura, LocalDate fechaInicio, LocalDate fechaFin , int cupoMaximo, Aula aula, String profesorId) {
+    public Curso(Integer CursoId,String asignatura, LocalDate fechaInicio, LocalDate fechaFin , int cupoMaximo, Aula aula, String profesorId) {
         if (asignatura == null || asignatura.isBlank()) {
             JOptionPane.showMessageDialog(null, "La asignatura no puede ser nula o vacía", "Error", JOptionPane.ERROR_MESSAGE);
             throw new CursoException("La asignatura no puede ser nula o vacía");
@@ -37,14 +37,11 @@ public class Curso {
             JOptionPane.showMessageDialog(null, "El cupo máximo debe ser mayor a cero", "Error", JOptionPane.ERROR_MESSAGE);
             throw new CursoException("El cupo máximo debe ser mayor a cero");
         }
-        if (aula == null) {
-            JOptionPane.showMessageDialog(null, "El aula no puede ser nula o vacía", "Error", JOptionPane.ERROR_MESSAGE);
-            throw new CursoException("El aula no puede ser nula o vacía");
-        }
         if (fechaInicio == null || fechaFin == null || fechaFin.isBefore(fechaInicio)) {
             throw new CursoException("Fechas de ciclo académico inválidas");
         }
 
+        this.CursoId = CursoId;
         this.asignatura = asignatura;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -57,15 +54,6 @@ public class Curso {
         this.alumnoIds = new ArrayList<>();
         this.claseIds = new ArrayList<>();
     }
-
-    public Curso(CursoId id, String asignatura, int cupoMaximo) {
-        this.asignatura = asignatura;
-        this.cupoMaximo = cupoMaximo;
-        this.alumnoIds = new ArrayList<>();
-        this.claseIds = new ArrayList<>();
-    }
-    
-    
 
     public void inscribirAlumno(AlumnoId alumnoId) {
         if (alumnoId == null) {
@@ -87,6 +75,10 @@ public class Curso {
             throw new CursoException("El claseId no puede ser nulo");
         }
         claseIds.add(claseId);
+    }
+
+    public Integer getCursoId() {
+        return CursoId;
     }
 
     public List<AlumnoId> getAlumnoIds() {

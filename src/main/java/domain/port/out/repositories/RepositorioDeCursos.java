@@ -11,6 +11,6 @@ import java.util.Optional;
 public interface RepositorioDeCursos {
     // Interfaz que utiliza el adaptador del repositorio
     Curso guardar(Curso curso);
-    Optional<Curso> buscarPorId(String id);
+    Optional<Curso> buscarPorId(Integer id);
     List<Curso> listar();
 }
