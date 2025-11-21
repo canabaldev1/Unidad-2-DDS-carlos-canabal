@@ -13,6 +13,7 @@ import java.time.LocalDate;
  */
 public record ContratarProfesorCommand(
         ProfesorId profesorId,
+        String numero,
         String cicloAcademico,
         LocalDate fechaInicio,
         LocalDate fechaFin,

@@ -5,13 +5,15 @@ import application.port.in.command.ContratarProfesorCommand;
 import domain.model.profesor.Contrato;
 import domain.port.out.repositories.RepositorioDeContratos;
 import domain.valueobjects.profesor.ContratoId;
-import domain.valueobjects.profesor.ProfesorId;
-import java.time.LocalDate;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author lm-carlos
  */
+@Service
+@Transactional
 public class ContratarProfesorService implements ContratarProfesorUseCase {
 
     private final RepositorioDeContratos repositorioDeContratos;
@@ -30,6 +32,7 @@ public class ContratarProfesorService implements ContratarProfesorUseCase {
         Contrato contrato = new Contrato(
                 contratoId,
                 command.profesorId(),
+                command.numero(),
                 command.cicloAcademico(),
                 command.fechaInicio(),
                 command.fechaFin(),
