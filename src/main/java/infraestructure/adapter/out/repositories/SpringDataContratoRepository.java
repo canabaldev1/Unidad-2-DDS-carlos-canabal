@@ -10,6 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author lm-carlos
  */
-public interface SpringDataProfesorRepository extends JpaRepository<JpaProfesorEntity, String> {
-
+public interface SpringDataContratoRepository extends JpaRepository<JpaContratoEntity, String> {
+    
 }

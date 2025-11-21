@@ -16,8 +16,9 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional
-public class CrearProfesorService implements CrearProfesorUseCase{
-private final RepositorioDeProfesores repositorioDeProfesores;
+public class CrearProfesorService implements CrearProfesorUseCase {
+
+    private final RepositorioDeProfesores repositorioDeProfesores;
 
     public CrearProfesorService(RepositorioDeProfesores repositorioDeProfesores) {
         this.repositorioDeProfesores = repositorioDeProfesores;
@@ -27,18 +28,16 @@ private final RepositorioDeProfesores repositorioDeProfesores;
     public void handle(CrearProfesorCommand command) {
         // 1. CREAR VALUE OBJECTS
         DatosPersonales datosPersonales = new DatosPersonales(
-            command.nombre(),
-            command.apellido(),
-            command.fechaNacimiento()
+                command.nombre(),
+                command.apellido(),
+                command.fechaNacimiento()
         );
-        
 
         // CREAR ID ÚNICO
         ProfesorId profesorId = ProfesorId.generate();
 
         // CREAR ENTIDAD DE DOMINIO
         Profesor profesor = new Profesor(profesorId, datosPersonales, command.especialidad());
-
 
         // GUARDAR
         repositorioDeProfesores.guardar(profesor);

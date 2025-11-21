@@ -4,10 +4,20 @@
  */
 package application.port.in.command;
 
+import domain.valueobjects.profesor.ProfesorId;
+import java.time.LocalDate;
+
 /**
  *
  * @author lm-carlos
  */
-public record ContratarProfesorCommand() {
+public record ContratarProfesorCommand(
+        ProfesorId profesorId,
+        String numero,
+        String cicloAcademico,
+        LocalDate fechaInicio,
+        LocalDate fechaFin,
+        double salario
+        ) {
 
 }
