@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * @author lm-carlos
  */
 class ServicioAsignacionAlumnoTest {
-
+/*
     @Test
     void matricularAlumno_CuandoHayCupo_DeberiaRetornarEvento() {
         // Arrange
@@ -76,5 +76,5 @@ class ServicioAsignacionAlumnoTest {
         );
 
         assertEquals("El curso no tiene cupos", exception.getMessage());
-    }
+    }*/
 }

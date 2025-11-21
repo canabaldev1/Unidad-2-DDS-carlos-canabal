@@ -9,6 +9,22 @@ import java.util.regex.Pattern;
 public record DatosContacto(String telefono, String email, String direccion) {
 
     private static final Pattern TELEFONO_PATTERN = Pattern.compile("\\d+");
+
+    @Override
+    public String direccion() {
+        return direccion;
+    }
+
+    @Override
+    public String email() {
+        return email;
+    }
+
+    @Override
+    public String telefono() {
+        return telefono;
+    }
+
     private static final Pattern EMAIL_PATTERN = Pattern.compile(
             "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$"
     );

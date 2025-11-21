@@ -67,6 +67,21 @@ public record DatosPersonales(String nombres, String apellidos, LocalDate fechaN
         return apellidos;
     }
 
+    @Override
+    public String apellidos() {
+        return apellidos;
+    }
+
+    @Override
+    public LocalDate fechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    @Override
+    public String nombres() {
+        return nombres;
+    }
+
     public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }

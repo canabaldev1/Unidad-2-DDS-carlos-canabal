@@ -13,10 +13,10 @@ import java.time.Instant;
  * @author lm-carlos
  */
 public class ServicioDeAsistencia {
-
+/*
     public AsistenciaRegistrada registrarAsistencia(Alumno alumno, Sesion sesion, EstadoAsistencia estado) {
 
-        Asistencia asistencia = new Asistencia(
+       Asistencia asistencia = new Asistencia(
                 AsistenciaId.generate(),
                 alumno.getId(),
                 sesion.getId(),
@@ -24,5 +24,5 @@ public class ServicioDeAsistencia {
         );
 
         return new AsistenciaRegistrada(asistencia.getId().getValue(), Instant.now());
-    }
+    }*/
 }
