@@ -60,6 +60,23 @@
             <artifactId>jcalendar</artifactId>
             <version>1.4</version>
         </dependency>
+
+        <!-- etcetera -->
+        <dependency>
+            <groupId>com.github.lgooddatepicker</groupId>
+            <artifactId>LGoodDatePicker</artifactId>
+            <version>11.2.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com</groupId>
+            <artifactId>forms_rt</artifactId>
+            <version>2025</version>
+        </dependency>
+
+
+
+
     </dependencies>
 
     <build>

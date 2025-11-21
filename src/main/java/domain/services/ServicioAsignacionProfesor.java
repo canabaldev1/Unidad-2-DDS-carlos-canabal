@@ -12,7 +12,7 @@ import java.time.Instant;
 public class ServicioAsignacionProfesor {
 
     public ProfesorAsignado asignarProfesorACurso(Profesor profesor, Curso curso) {
-        curso.asignarProfesor(profesor.getId());
+        // Lógica de asignación
 
         // Retornar evento de dominio
         return new ProfesorAsignado(profesor.getId().getValue(), Instant.now());

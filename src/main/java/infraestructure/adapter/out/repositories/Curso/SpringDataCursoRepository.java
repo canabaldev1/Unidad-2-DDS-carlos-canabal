@@ -1,4 +1,4 @@
-package infraestructure.adapter.out.repositories;
+package infraestructure.adapter.out.repositories.Curso;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

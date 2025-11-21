@@ -7,6 +7,8 @@ import domain.valueobjects.curso.ClaseId;
 import domain.valueobjects.curso.CursoId;
 import domain.valueobjects.profesor.ProfesorId;
 import domain.valueobjects.shared.CicloAcademico;
+
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
@@ -24,20 +26,20 @@ public class Curso {
     private Aula aula;
     private List<AlumnoId> alumnoIds;  
     private List<ClaseId> claseIds;
-    private ProfesorId profesorId; 
+    private String profesorId;
 
-    public Curso(String asignatura, LocalDate fechaInicio, LocalDate fechaFin , int cupoMaximo, Aula aula, ProfesorId profesorId) {
+    public Curso(String asignatura, LocalDate fechaInicio, LocalDate fechaFin , int cupoMaximo, Aula aula, String profesorId) {
         if (asignatura == null || asignatura.isBlank()) {
+            JOptionPane.showMessageDialog(null, "La asignatura no puede ser nula o vacía", "Error", JOptionPane.ERROR_MESSAGE);
             throw new CursoException("La asignatura no puede ser nula o vacía");
         }
         if (cupoMaximo <= 0) {
+            JOptionPane.showMessageDialog(null, "El cupo máximo debe ser mayor a cero", "Error", JOptionPane.ERROR_MESSAGE);
             throw new CursoException("El cupo máximo debe ser mayor a cero");
         }
         if (aula == null) {
+            JOptionPane.showMessageDialog(null, "El aula no puede ser nula o vacía", "Error", JOptionPane.ERROR_MESSAGE);
             throw new CursoException("El aula no puede ser nula o vacía");
-        }
-        if (profesorId == null) {
-            throw new CursoException("El profesorId no puede ser nulo o vacío");
         }
         if (fechaInicio == null || fechaFin == null || fechaFin.isBefore(fechaInicio)) {
             throw new CursoException("Fechas de ciclo académico inválidas");
@@ -75,11 +77,7 @@ public class Curso {
         alumnoIds.add(alumnoId);
     }
 
-    public void asignarProfesor(ProfesorId profesorId) {
-        if (profesorId == null ) {
-            throw new CursoException("El profesorId no puede ser nulo o vacío");
-        }
-
+    public void asignarProfesor(String profesorId) {
         this.profesorId = profesorId;
 
     }
@@ -123,11 +121,11 @@ public class Curso {
         this.fechaFin = fechaFin;
     }
 
-    public ProfesorId getProfesorId() {
+    public String getProfesorId() {
         return profesorId;
     }
 
-    public void setProfesorId(ProfesorId profesorId) {
+    public void setProfesorId(String profesorId) {
         this.profesorId = profesorId;
     }
 
