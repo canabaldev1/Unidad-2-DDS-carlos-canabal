@@ -7,6 +7,7 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -44,23 +45,60 @@ public class JpaRepositorioDeCursos implements RepositorioDeCursos {
 
 
     @Override
-    public Optional<Curso> buscarPorId(String id) {
-        return springRepo.findById(Long.valueOf(id))
-                .map(entity -> new Curso(
-                        null,
-                        entity.getAsignatura(),
-                        entity.getCupoMaximo()
-                ));
+    public Optional<Curso> buscarPorId(Integer id) {
+        String sql = """
+        SELECT
+            id, asignatura, fecha_inicio, fecha_fin, cupo_maximo, aula, profesor_id
+        FROM cursos WHERE id = ?
+        """;
+
+        List<Object[]> results = entityManager
+                .createNativeQuery(sql)
+                .setParameter(1, id)
+                .getResultList();
+
+        if (results.isEmpty()) {
+            return Optional.empty();
+        }
+
+        Object[] row = results.getFirst();
+
+        LocalDate fechaInicio = ((java.sql.Date) row[2]).toLocalDate();
+        LocalDate fechaFin    = ((java.sql.Date) row[3]).toLocalDate();
+
+        Curso curso = new Curso(
+                (Integer) row[0],
+                (String) row[1],
+                fechaInicio,
+                fechaFin,
+                (Integer) row[4],
+                null,
+                (String) row[5]
+        );
+
+        return Optional.of(curso);
     }
 
     @Override
     public List<Curso> listar() {
-        return springRepo.findAll().stream()
-                .map(entity -> new Curso(
-                        null,
-                        entity.getAsignatura(),
-                        entity.getCupoMaximo()
-                ))
-                .collect(Collectors.toList());
+        String sql = """
+        SELECT
+            id, asignatura, fecha_inicio, fecha_fin, cupo_maximo, profesor_id
+        FROM cursos
+        """;
+
+        List<Object[]> results = entityManager
+                .createNativeQuery(sql)
+                .getResultList();
+
+        return results.stream().map(row -> new Curso(
+                (Integer) row[0],
+                (String) row[1],
+                (LocalDate) row[2],
+                (LocalDate) row[3],
+                (Integer) row[4],
+                null,
+                (String) row[5]
+        )).collect(Collectors.toList());
     }
 }

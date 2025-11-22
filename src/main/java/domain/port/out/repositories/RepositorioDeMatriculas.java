@@ -4,12 +4,16 @@
  */
 package domain.port.out.repositories;
 
+import domain.model.alumno.Matricula;
+
+import java.util.List;
+import java.util.Optional;
 /**
  *
  * @author lm-carlos
  */
 public interface RepositorioDeMatriculas {
-    
-    // Interfaz que utiliza el adaptador del repositorio
-    
+    Matricula guardar (Matricula matricula);
+    Optional<Matricula> buscarPorId(String id);
+    List<Matricula> listar();
 }

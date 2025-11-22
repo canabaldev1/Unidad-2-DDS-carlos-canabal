@@ -4,16 +4,14 @@
  */
 package application.port.in;
 
-import application.port.in.command.MatricularAlumnoCommand;
+import domain.model.alumno.Matricula;
+import domain.valueobjects.shared.CicloAcademico;
+import java.time.LocalDate;
 
 /**
  *
  * @author lm-carlos
  */
 public interface MatricularAlumnoUseCase {
-
-    // Interfaz del puerto de entrada
-    
-    void handle(MatricularAlumnoCommand command);
-
+    Matricula registrar(int alumnoId, int cursoId, LocalDate fechaInscripcion);
 }

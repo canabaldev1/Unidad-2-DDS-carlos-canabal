@@ -4,12 +4,17 @@
  */
 package domain.port.out.repositories;
 
+import domain.model.alumno.Alumno;
+
+import java.util.List;
+import java.util.Optional;
+
 /**
  *
- * @author lm-carlos
+ * @author Victor Garcia
  */
 public interface RepositorioDeAlumnos {
-    
-    // Interfaz que utiliza el adaptador del repositorio
-    
+    Alumno guardar(Alumno alumno);
+    Optional<Alumno> buscarPorId(Integer id);
+    List<Alumno> listar();
 }

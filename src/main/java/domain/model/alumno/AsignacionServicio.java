@@ -18,8 +18,36 @@ public class AsignacionServicio {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
 
+    public ServicioComplementario getServicioComplementario() {
+        return servicioComplementario;
+    }
+
+    public void setServicioComplementario(ServicioComplementario servicioComplementario) {
+        this.servicioComplementario = servicioComplementario;
+    }
+
+    public AlumnoId getAlumnoId() {
+        return alumnoId;
+    }
+
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public LocalDate getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
     public AsignacionServicio(AsignacionServicioId id, AlumnoId alumnoId, ServicioComplementario servicioComplementario,
-            LocalDate fechaInicio, LocalDate fechaFin) {
+                              LocalDate fechaInicio, LocalDate fechaFin) {
         if (alumnoId == null) {
             throw new AsignacionServicioException("AlumnoId no puede ser nulo");
         }

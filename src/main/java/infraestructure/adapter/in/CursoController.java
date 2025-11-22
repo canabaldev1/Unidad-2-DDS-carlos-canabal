@@ -1,19 +1,20 @@
 package infraestructure.adapter.in;
 
-import application.port.in.RegistrarCursoUseCase;
+import application.port.in.CursoUseCases;
 import domain.model.curso.Curso;
 import domain.valueobjects.curso.Aula;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Component
 public class CursoController {
 
-    private final RegistrarCursoUseCase registrarCursoUseCase;
+    private final CursoUseCases cursoUseCases;
 
-    public CursoController(RegistrarCursoUseCase registrarCursoUseCase) {
-        this.registrarCursoUseCase = registrarCursoUseCase;
+    public CursoController(CursoUseCases cursoUseCases) {
+        this.cursoUseCases = cursoUseCases;
     }
 
     /**
@@ -45,7 +46,8 @@ public class CursoController {
         }
 
         // Delegación al caso de uso (lógica de negocio)
-        return registrarCursoUseCase.registrarCurso(
+        return cursoUseCases.registrarCurso(
+                null,
                 asignatura,
                 cupoMaximo,
                 fechaInicio,
@@ -54,4 +56,14 @@ public class CursoController {
                 profesorId
         );
     }
+
+    public Optional<Curso> buscarCursoPorId(Integer Id) {
+
+        if (Id == null || Id < 0) {
+            throw new IllegalArgumentException("El ID del curso no puede estar vacío");
+        }
+
+        return cursoUseCases.buscarCursoPorId(Id);
+    }
+
 }

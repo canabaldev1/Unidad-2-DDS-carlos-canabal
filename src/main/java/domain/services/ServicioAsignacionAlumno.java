@@ -12,7 +12,7 @@ import java.time.Instant;
  * @author lm-carlos
  */
 public class ServicioAsignacionAlumno {
-
+/*
     public AlumnoAsignado matricularAlumno(Alumno alumno, Curso curso) {
 
         Specification<Curso> capacidad = new CupoDisponibleSpecification();
@@ -26,5 +26,5 @@ public class ServicioAsignacionAlumno {
         // Retornar evento de dominio
         return new AlumnoAsignado(alumno.getId().getValue(), Instant.now());
     }
-
+*/
 }

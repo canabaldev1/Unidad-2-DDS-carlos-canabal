@@ -4,25 +4,24 @@
  */
 package infraestructure.adapter.in.swing;
 
+import infraestructure.adapter.in.swing.Alumnos.JFrameAlumnos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import infraestructure.adapter.in.swing.Cursos.JFrameCursos;
-
 /**
  *
  * @author lm-carlos
  */
 @Component
 public class JFrameVentanaPrincipal extends javax.swing.JFrame {
-
+    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(JFrameVentanaPrincipal.class.getName());
 
     /**
      * Creates new form JFrameVentanaPrincipal
      */
     private final ApplicationContext context;
-
     @Autowired
     public JFrameVentanaPrincipal(ApplicationContext context) {
         this.context = context;
@@ -43,6 +42,7 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,6 +78,13 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setText("Alumnos");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,12 +94,15 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,7 +117,9 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
                     .addComponent(jButton5))
                 .addGap(18, 18, 18)
                 .addComponent(jButton3)
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jButton4)
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         pack();
@@ -141,8 +153,14 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
         ventanaCursos.setVisible(true);
     }//GEN-LAST:event_CursosAction
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        JFrameAlumnos ventanaAlumnos = context.getBean(JFrameAlumnos.class);
+        ventanaAlumnos.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void CursosButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        ventanaCursos.setLocationRelativeTo(this);
+        JFrameCursos ventanaCursos = context.getBean(JFrameCursos.class);
         ventanaCursos.setVisible(true);
     }
 
@@ -161,7 +179,7 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    /*    public static void main(String args[]) {
+/*    public static void main(String args[]) {
 
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -180,6 +198,7 @@ public class JFrameVentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
